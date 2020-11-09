@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/selvagem/static/css/main.1b37d5b1.chunk.css",
-    "main.js": "/selvagem/static/js/main.018fab59.chunk.js",
-    "main.js.map": "/selvagem/static/js/main.018fab59.chunk.js.map",
+    "main.js": "/selvagem/static/js/main.5780691e.chunk.js",
+    "main.js.map": "/selvagem/static/js/main.5780691e.chunk.js.map",
     "runtime-main.js": "/selvagem/static/js/runtime-main.e0fd1762.js",
     "runtime-main.js.map": "/selvagem/static/js/runtime-main.e0fd1762.js.map",
     "static/js/2.63831951.chunk.js": "/selvagem/static/js/2.63831951.chunk.js",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.e0fd1762.js",
     "static/js/2.63831951.chunk.js",
     "static/css/main.1b37d5b1.chunk.css",
-    "static/js/main.018fab59.chunk.js"
+    "static/js/main.5780691e.chunk.js"
   ]
 }
