@@ -18,8 +18,6 @@ import mini_junte from './images/mini_junte.jpg';
 import vesicula from './images/vesicula.png';
 import pedra from './images/pedra.jpg';
 
-const Content = styled.div``;
-
 const Text = styled.div`
   font-size: calc(10px + 2vmin);
   text-align: justify;
@@ -32,7 +30,91 @@ const Title = styled.h1`
   text-transform: uppercase;
 `;
 
+const Video = styled.div`
+  position: fixed;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+`;
+
+const VideoWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  top: -100%;
+  pointer-events: none;
+`;
+
+const Columns = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50vw 50vw;
+`;
+
+const Image = styled.img`
+  display: inline;
+  width: 100%;
+`;
+
+const BlackText = styled(Text)`
+  background-color: #1b1b1b;
+`;
+
+const RightAligned = styled(Text)`
+  text-align: right;
+`;
+
+const ImageBackground = styled.div`
+  background-image: url(${(props) => props.$src});
+  width: 100%;
+  height: 100%;
+  opacity: ${(props) => (props.$dim ? '50%' : '100%')};
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -99;
+`;
+
+const Embed = ({ id, title, mute }) => (
+  <ReactPlayer
+    id='youtube-player'
+    url={`https://youtube.com/watch?v=${id}`}
+    width='100%'
+    height='100%'
+    playing
+    muted={mute}
+    loop
+    controls={false}
+    volume={1}
+    config={{
+      youtube: {
+        playerVars: {
+          rel: 0,
+          autoplay: 1,
+          showinfo: 0,
+          controls: 0,
+          playsinline: 1,
+        },
+      },
+      attributes: {
+        autoPlay: false,
+        preload: 'none',
+        allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+      },
+    }}
+  />
+);
 const Screen1 = () => null;
+
 const Screen2 = () => (
   <Text>
     <Title>Sonho de abertura</Title>
@@ -64,56 +146,6 @@ const Screen3 = () => (
     – esse mesmo nós contido em Gaia, que é também o nós de Emanuele – com um pé dentro e um pé fora do caminho de nos
     tornarmos parte dessa estrela em definitivo.
   </Text>
-);
-
-const Video = styled.div`
-  position: fixed;
-  z-index: -99;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-`;
-
-const VideoWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 300%;
-  top: -100%;
-  pointer-events: none;
-`;
-
-const Embed = ({ id, title, mute }) => (
-  <ReactPlayer
-    id='youtube-player'
-    url={`https://youtube.com/watch?v=${id}`}
-    width='100%'
-    height='100%'
-    playing
-    muted={mute}
-    loop
-    controls={false}
-    volume={1}
-    config={{
-      youtube: {
-        playerVars: {
-          rel: 0,
-          autoplay: 1,
-          showinfo: 0,
-          controls: 0,
-          playsinline: 1,
-        },
-      },
-      attributes: {
-        autoPlay: false,
-        preload: 'none',
-        allow: 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
-      },
-    }}
-  />
 );
 
 const Screen4 = () => (
@@ -152,25 +184,12 @@ const Screen4 = () => (
   </>
 );
 
-const Columns = styled.div`
-  display: grid;
-  align-items: center;
-  grid-template-columns: 50vw 50vw;
-`;
-
-const Column = styled.div``;
-
-const Image = styled.img`
-  display: inline;
-  width: 100%;
-`;
-
 const Screen5 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Lua' src={lua_1} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <Text>
         <Title>Luas de leite</Title>
         Quanto mais minha filha fala, menos ela mama; o leite é sua relação mililítrica com o mundo: o leite materno é
@@ -180,16 +199,16 @@ const Screen5 = () => (
         amamentação prolongada e interespecífica mediadas por campos laticidas tanto para mamíferes quanto para
         operáries em condições precarizadas de trabalho.
       </Text>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen6 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Lua' src={lua_2} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <Text>
         Aliancei-me com outras fêmeas e seus leites – aqui, especificamente, cabra, vaca, ovelha e monika – de dentro de
         um cenário de lactation para pensar por e com esses corpos. Tocar o leite como língua, como língua-mãe, é também
@@ -199,16 +218,16 @@ const Screen6 = () => (
         autonomia nem na dinâmica da língua-láctea, nem na experiência da vida ela mesma: somos todos dependentes uns
         dos outros em certa medida, assim como também sugere Emanuele.
       </Text>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen7 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Lua' src={lua_3} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <Text>
         Aproximar a noção de língua/linguagem da matéria leite é também pensar com essa relação matriarcal cúmplice e
         horizontal de troca. A maternidade me ensinou a pensar com o corpo e por ele – quem amamenta sabe o quanto de
@@ -217,16 +236,16 @@ const Screen7 = () => (
         ordinários; na maternagem que é matéria roçando matéria, radicalmente imanente, lindamente imanente. Essas luas
         de leite são imagens simples, feitas de copos de leite materno expostos ao tempo de 30 dias, em 2019.
       </Text>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen8 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Lua' src={lua_4} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <Text>
         Durante o experimento, o leite fermentando no copo foi dando lugar a imagens de luas com crateras fúngicas e
         gordurosas, cada vez mais parecidas com a forma desta satélite que nos ecoa nos corpos d’água. Aqui no Brasil
@@ -234,7 +253,7 @@ const Screen8 = () => (
         conhecer e fortalecer seus laços no pós-parto. A descida do leite para latines – e não por acaso a subida do
         leite para anglo-europeus – é o tempo de encontro e de contato pele a pele, tempo a sós.
       </Text>
-    </Column>
+    </div>
   </Columns>
 );
 
@@ -246,20 +265,12 @@ const Screen9 = () => (
   </Video>
 );
 
-const BlackText = styled(Text)`
-  background-color: #1b1b1b;
-`;
-
-const RightAligned = styled(Text)`
-  text-align: right;
-`;
-
 const Screen10 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Mini' src={mini_1} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <BlackText>
         <Title>Viagem Ao Centro Das Luas, Minimundinhos</Title>
         Então caímos dentro desses quatro copos de leite que, desde agosto de 2019, estão parados na minha janela
@@ -267,31 +278,32 @@ const Screen10 = () => (
         fermentam e se re/cocriam em cada um deles, mas vi a olho nu a transformação de cada leite, de cada língua, de
         cada universo lácteo, de cada uma dessas vias lácteas em uma trama multiespecífica.
       </BlackText>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen11 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Mini' src={mini_2} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <BlackText>
         E, por ser específico, leite não é um produto de uma relação, mas um produzir-com: é feito sob medida para o
         filhote mamífero daquela espécie. Quando falamos da especificidade do leite, falamos que a quantidade de
         gorduras, açúcares, sais minerais e proteínas presentes nessa substância é regulada pela necessidade e pelo tipo
         de cada filhote, sob demanda.
       </BlackText>
-    </Column>
+    </div>
   </Columns>
 );
+
 const Screen12 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Mini' src={mini_3} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <BlackText>
         O leite da baleia, por exemplo, não tem em sua composição os nutrientes necessários para o filhote da onça, nem
         o leite da cadela contém em sua formulação os nutrientes de que precisa o filhote de leoa-marinha. Saliva e
@@ -299,23 +311,23 @@ const Screen12 = () => (
         cada infante vai amadurecendo, o leite também vai. E é nesse balanço da vida que o leite, vivo por excelência,
         vai se transformando composicionalmente.
       </BlackText>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen13 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Mini' src={mini_4} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <BlackText>
         No entanto, apesar de ser específico no sentido de ser inerente à espécie, o leite também é multiespecífico em
         sua composição, ou seja, ele é composto não apenas pelos principais componentes que mencionei, mas também é
         veículo de bactérias e vírus, ou seja, leite é onde podem habitar outras espécies tanto no trato
         lactante-lactente quanto na sua forma supostamente morta fora do corpo e da boca.{' '}
       </BlackText>
-    </Column>
+    </div>
   </Columns>
 );
 
@@ -331,10 +343,10 @@ const Screen15 = () => (
 
 const Screen16 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Embrião' src={embriao} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <RightAligned>
         <p>útero gravídico aumentado</p>
         <p>de volume de contornos regulares e</p>
@@ -343,16 +355,16 @@ const Screen16 = () => (
         <p>batimentos cardíacos</p>
         <p>presentes</p>
       </RightAligned>
-    </Column>
+    </div>
   </Columns>
 );
 
 const Screen17 = () => (
   <Columns>
-    <Column>
+    <div>
       <Image alt='Vesícula' src={vesicula} />
-    </Column>
-    <Column>
+    </div>
+    <div>
       <RightAligned>
         <p>vesícula biliar distendida</p>
         <p>de parede algo espessadas</p>
@@ -360,24 +372,9 @@ const Screen17 = () => (
         <p>acústica posterior</p>
         <p>medindo três centímetros</p>
       </RightAligned>
-    </Column>
+    </div>
   </Columns>
 );
-
-const ImageBackground = styled.div`
-  background-image: url(${(props) => props.$src});
-  width: 100%;
-  height: 100%;
-  opacity: ${(props) => (props.$dim ? '50%' : '100%')};
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -99;
-`;
 
 const Screen18 = () => (
   <>
@@ -503,8 +500,6 @@ const Screen27 = () => (
   </RightAligned>
 );
 
-const Screen28 = () => null;
-
 const screens = {
   1: Screen1,
   2: Screen2,
@@ -533,11 +528,9 @@ const screens = {
   25: Screen25,
   26: Screen26,
   27: Screen27,
-  28: Screen28,
 };
 
 const Button = styled.button`
-  // button reset
   background-color: ${(props) => (brightBackground.includes(props.$screen) ? '#1b1b1b' : 'Transparent')};
   background-repeat: no-repeat;
   border: none;
@@ -569,21 +562,43 @@ const Audio = ({ screen }) => {
   return <audio ref={ref} src={hidrogenio} autoPlay loop />;
 };
 
+const Credits = styled.div`
+  font-size: 14px;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  a:link,
+  a:visited {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+  }
+  svg {
+    height: 14px;
+    color: #fff;
+  }
+`;
+
 function App() {
-  const [screen, setScreen] = React.useState(1);
+  const [screen, setScreen] = React.useState(27);
 
   const CurrentPage = screens[screen];
-  console.log(screen);
+
   return (
-    <Content>
+    <div>
       <Audio screen={screen} />
       <CurrentPage />
-      {screens[screen + 1] && (
+      {screens[screen + 1] ? (
         <Button $screen={screen} onClick={() => setScreen(screen + 1)}>
           &gt;
         </Button>
+      ) : (
+        <Credits>
+          Viabilizado para web por <a href='mailto:info@deodoro.org'>Rodrigo Deodoro</a> -{' '}
+          <a href='https://github.com/materlactea/selvagem'>código fonte</a>
+        </Credits>
       )}
-    </Content>
+    </div>
   );
 }
 
