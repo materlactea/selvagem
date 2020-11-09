@@ -538,7 +538,7 @@ const screens = {
 
 const Button = styled.button`
   // button reset
-  background-color: Transparent;
+  background-color: ${(props) => (brightBackground.includes(props.$screen) ? '#1b1b1b' : 'Transparent')};
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
@@ -552,20 +552,37 @@ const Button = styled.button`
   font-size: calc(32px + 2vmin);
 `;
 
-const Next = ({ go }) => <Button onClick={go}>&gt;</Button>;
+const muteHydrogen = [9, 19, 20];
+const brightBackground = [20];
+
+const Audio = ({ screen }) => {
+  const ref = React.useRef();
+
+  React.useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    ref.current.muted = muteHydrogen.includes(screen);
+  }, [screen]);
+
+  return <audio ref={ref} src={hidrogenio} autoPlay loop />;
+};
 
 function App() {
   const [screen, setScreen] = React.useState(1);
 
   const CurrentPage = screens[screen];
-
+  console.log(screen);
   return (
     <Content>
-      <audio autoPlay>
-        <source src={hidrogenio} />
-      </audio>
+      <Audio screen={screen} />
       <CurrentPage />
-      {screens[screen + 1] && <Next go={() => setScreen(screen + 1)} />}
+      {screens[screen + 1] && (
+        <Button $screen={screen} onClick={() => setScreen(screen + 1)}>
+          &gt;
+        </Button>
+      )}
     </Content>
   );
 }
