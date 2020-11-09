@@ -494,12 +494,12 @@ const Screen26 = () => (
 const Screen27 = () => (
   <RightAligned>
     <p>
-      “Dedico essa apresentação aos três grandes nascimentos de 2015 que nos metamorfosearam ao ponto desse instante:
+      Dedico essa apresentação aos três grandes nascimentos de 2015 que nos metamorfosearam ao ponto desse instante:
     </p>
     <p></p>
     <p>para Dora, de quem um dia fui casulo,</p>
     <p>Colette, para quem um dia fui cereja</p>
-    <p>e Caetano, para quem sou a mãe de Dora.”</p>
+    <p>e Caetano, para quem sou a mãe de Dora.</p>
   </RightAligned>
 );
 
