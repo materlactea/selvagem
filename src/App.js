@@ -61,10 +61,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const BlackText = styled(Text)`
-  background-color: #1b1b1b;
-`;
-
 const RightAligned = styled(Text)`
   text-align: right;
 `;
@@ -266,69 +262,53 @@ const Screen9 = () => (
 );
 
 const Screen10 = () => (
-  <Columns>
-    <div>
-      <Image alt='Mini' src={mini_1} />
-    </div>
-    <div>
-      <BlackText>
-        <Title>Viagem Ao Centro Das Luas, Minimundinhos</Title>
-        Então caímos dentro desses quatro copos de leite que, desde agosto de 2019, estão parados na minha janela
-        cultivando ou tornando possíveis suas próprias metamorfoses. Não faço ideia de quantas gentes coabitam,
-        fermentam e se re/cocriam em cada um deles, mas vi a olho nu a transformação de cada leite, de cada língua, de
-        cada universo lácteo, de cada uma dessas vias lácteas em uma trama multiespecífica.
-      </BlackText>
-    </div>
-  </Columns>
+  <>
+    <ImageBackground $dim $src={mini_1} />
+    <Text>
+      <Title>Viagem Ao Centro Das Luas, Minimundinhos</Title>
+      Então caímos dentro desses quatro copos de leite que, desde agosto de 2019, estão parados na minha janela
+      cultivando ou tornando possíveis suas próprias metamorfoses. Não faço ideia de quantas gentes coabitam, fermentam
+      e se re/cocriam em cada um deles, mas vi a olho nu a transformação de cada leite, de cada língua, de cada universo
+      lácteo, de cada uma dessas vias lácteas em uma trama multiespecífica.
+    </Text>
+  </>
 );
 
 const Screen11 = () => (
-  <Columns>
-    <div>
-      <Image alt='Mini' src={mini_2} />
-    </div>
-    <div>
-      <BlackText>
-        E, por ser específico, leite não é um produto de uma relação, mas um produzir-com: é feito sob medida para o
-        filhote mamífero daquela espécie. Quando falamos da especificidade do leite, falamos que a quantidade de
-        gorduras, açúcares, sais minerais e proteínas presentes nessa substância é regulada pela necessidade e pelo tipo
-        de cada filhote, sob demanda.
-      </BlackText>
-    </div>
-  </Columns>
+  <>
+    <ImageBackground $dim $src={mini_2} />
+    <Text>
+      E, por ser específico, leite não é um produto de uma relação, mas um produzir-com: é feito sob medida para o
+      filhote mamífero daquela espécie. Quando falamos da especificidade do leite, falamos que a quantidade de gorduras,
+      açúcares, sais minerais e proteínas presentes nessa substância é regulada pela necessidade e pelo tipo de cada
+      filhote, sob demanda.
+    </Text>
+  </>
 );
 
 const Screen12 = () => (
-  <Columns>
-    <div>
-      <Image alt='Mini' src={mini_3} />
-    </div>
-    <div>
-      <BlackText>
-        O leite da baleia, por exemplo, não tem em sua composição os nutrientes necessários para o filhote da onça, nem
-        o leite da cadela contém em sua formulação os nutrientes de que precisa o filhote de leoa-marinha. Saliva e
-        glândulas mamárias fazem da boca que se fecha sobre o mamilo um canal vital de nutrição e imunização. Conforme
-        cada infante vai amadurecendo, o leite também vai. E é nesse balanço da vida que o leite, vivo por excelência,
-        vai se transformando composicionalmente.
-      </BlackText>
-    </div>
-  </Columns>
+  <>
+    <ImageBackground $dim $src={mini_3} />
+    <Text>
+      O leite da baleia, por exemplo, não tem em sua composição os nutrientes necessários para o filhote da onça, nem o
+      leite da cadela contém em sua formulação os nutrientes de que precisa o filhote de leoa-marinha. Saliva e
+      glândulas mamárias fazem da boca que se fecha sobre o mamilo um canal vital de nutrição e imunização. Conforme
+      cada infante vai amadurecendo, o leite também vai. E é nesse balanço da vida que o leite, vivo por excelência, vai
+      se transformando composicionalmente.
+    </Text>
+  </>
 );
 
 const Screen13 = () => (
-  <Columns>
-    <div>
-      <Image alt='Mini' src={mini_4} />
-    </div>
-    <div>
-      <BlackText>
-        No entanto, apesar de ser específico no sentido de ser inerente à espécie, o leite também é multiespecífico em
-        sua composição, ou seja, ele é composto não apenas pelos principais componentes que mencionei, mas também é
-        veículo de bactérias e vírus, ou seja, leite é onde podem habitar outras espécies tanto no trato
-        lactante-lactente quanto na sua forma supostamente morta fora do corpo e da boca.{' '}
-      </BlackText>
-    </div>
-  </Columns>
+  <>
+    <ImageBackground $dim $src={mini_4} />
+    <Text>
+      No entanto, apesar de ser específico no sentido de ser inerente à espécie, o leite também é multiespecífico em sua
+      composição, ou seja, ele é composto não apenas pelos principais componentes que mencionei, mas também é veículo de
+      bactérias e vírus, ou seja, leite é onde podem habitar outras espécies tanto no trato lactante-lactente quanto na
+      sua forma supostamente morta fora do corpo e da boca.
+    </Text>
+  </>
 );
 
 const Screen14 = () => <Image src={mini_junte} />;
@@ -580,7 +560,7 @@ const Credits = styled.div`
 `;
 
 function App() {
-  const [screen, setScreen] = React.useState(27);
+  const [screen, setScreen] = React.useState(1);
 
   const CurrentPage = screens[screen];
 
