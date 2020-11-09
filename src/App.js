@@ -86,14 +86,14 @@ const VideoWrapper = styled.div`
   pointer-events: none;
 `;
 
-const Embed = ({ id, title }) => (
+const Embed = ({ id, title, mute }) => (
   <ReactPlayer
     id='youtube-player'
     url={`https://youtube.com/watch?v=${id}`}
     width='100%'
     height='100%'
     playing
-    muted
+    muted={mute}
     loop
     controls={false}
     volume={1}
@@ -120,7 +120,7 @@ const Screen4 = () => (
   <>
     <Video>
       <VideoWrapper>
-        <Embed title='A via láctea' id='KhhCpKj8_xk' />
+        <Embed mute title='A via láctea' id='KhhCpKj8_xk' />
       </VideoWrapper>
     </Video>
     <Text>
