@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b37d5b1.chunk.css",
+    "main.js": "/static/js/main.bb35edcb.chunk.js",
+    "main.js.map": "/static/js/main.bb35edcb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6b0061db.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6b0061db.js.map",
+    "static/js/2.26886e0f.chunk.js": "/static/js/2.26886e0f.chunk.js",
+    "static/js/2.26886e0f.chunk.js.map": "/static/js/2.26886e0f.chunk.js.map",
+    "static/js/3.038d641b.chunk.js": "/static/js/3.038d641b.chunk.js",
+    "static/js/3.038d641b.chunk.js.map": "/static/js/3.038d641b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.1b37d5b1.chunk.css.map": "/static/css/main.1b37d5b1.chunk.css.map",
+    "static/js/2.26886e0f.chunk.js.LICENSE.txt": "/static/js/2.26886e0f.chunk.js.LICENSE.txt",
+    "static/media/baia_cosmica.b6755cf4.jpg": "/static/media/baia_cosmica.b6755cf4.jpg",
+    "static/media/embriao.f03de8a2.png": "/static/media/embriao.f03de8a2.png",
+    "static/media/hidrogenio.46ad1ea7.mp3": "/static/media/hidrogenio.46ad1ea7.mp3",
+    "static/media/levanha.c8aa40c7.jpg": "/static/media/levanha.c8aa40c7.jpg",
+    "static/media/lua_1.1d56bd5e.png": "/static/media/lua_1.1d56bd5e.png",
+    "static/media/lua_2.5516a1b3.png": "/static/media/lua_2.5516a1b3.png",
+    "static/media/lua_3.fdd53cfa.png": "/static/media/lua_3.fdd53cfa.png",
+    "static/media/lua_4.f7a694d4.png": "/static/media/lua_4.f7a694d4.png",
+    "static/media/mini_1.05168ceb.jpg": "/static/media/mini_1.05168ceb.jpg",
+    "static/media/mini_2.e1e07d9f.jpg": "/static/media/mini_2.e1e07d9f.jpg",
+    "static/media/mini_3.0675c5c7.jpg": "/static/media/mini_3.0675c5c7.jpg",
+    "static/media/mini_4.b7e75973.jpg": "/static/media/mini_4.b7e75973.jpg",
+    "static/media/mini_junte.43f2bb3c.jpg": "/static/media/mini_junte.43f2bb3c.jpg",
+    "static/media/pedra.973bd7e7.jpg": "/static/media/pedra.973bd7e7.jpg",
+    "static/media/vesicula.d47043b4.png": "/static/media/vesicula.d47043b4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b0061db.js",
+    "static/js/2.26886e0f.chunk.js",
+    "static/css/main.1b37d5b1.chunk.css",
+    "static/js/main.bb35edcb.chunk.js"
+  ]
+}
