@@ -172,6 +172,7 @@ const Screen5 = () => (
     </Column>
     <Column>
       <Text>
+        <Title>Luas de leite</Title>
         Durante o experimento, o leite fermentando no copo foi dando lugar a imagens de luas com crateras fúngicas e
         gordurosas, cada vez mais parecidas com a forma desta satélite que nos ecoa nos corpos d’água. Aqui no Brasil
         reconhecemos a expressão “lua de leite”, usada para determinar o tempo que parturiente e bebê levam para se
