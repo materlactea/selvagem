@@ -553,7 +553,7 @@ const Button = styled.button`
 const Next = ({ go }) => <Button onClick={go}>&gt;</Button>;
 
 function App() {
-  const [screen, setScreen] = React.useState(18);
+  const [screen, setScreen] = React.useState(1);
 
   const CurrentPage = screens[screen];
 
