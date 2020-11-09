@@ -173,11 +173,12 @@ const Screen5 = () => (
     <Column>
       <Text>
         <Title>Luas de leite</Title>
-        Durante o experimento, o leite fermentando no copo foi dando lugar a imagens de luas com crateras fúngicas e
-        gordurosas, cada vez mais parecidas com a forma desta satélite que nos ecoa nos corpos d’água. Aqui no Brasil
-        reconhecemos a expressão “lua de leite”, usada para determinar o tempo que parturiente e bebê levam para se
-        conhecer e fortalecer seus laços no pós-parto. A descida do leite para latines – e não por acaso a subida do
-        leite para anglo-europeus – é o tempo de encontro e de contato pele a pele, tempo a sós.
+        Quanto mais minha filha fala, menos ela mama; o leite é sua relação mililítrica com o mundo: o leite materno é
+        uma língua, uma língua-mãe. E não falo de leite apenas nesta relação mãe-filhe mas, no Faloceno* – em meio aos
+        colapsos modernos, climáticos… –, falo de uma questão cosmopolítica do feminismo multiespecífico que pensa as
+        línguas não-negociadas com outras mamíferas e os sistemas de subalternização humana e não-humana envolvidos na
+        amamentação prolongada e interespecífica mediadas por campos laticidas tanto para mamíferes quanto para
+        operáries em condições precarizadas de trabalho.
       </Text>
     </Column>
   </Columns>
